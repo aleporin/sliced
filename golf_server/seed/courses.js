@@ -17,4 +17,13 @@ const main = async () => {
       map_img: ''
     }
   ]
+  await Course.insertMany(courses)
+  console.log('Created Courses')
 }
+
+const run = async () => {
+  await main()
+  db.close()
+}
+
+run()
