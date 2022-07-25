@@ -38,9 +38,11 @@
 
 ![Components Hierarchy Diagram](/assets/Screen%20Shot%202022-07-24%20at%2010.15.55%20PM.png)
 
-#### 
+#### ERD
 
-!
+![ERD](/assets/Screen%20Shot%202022-07-25%20at%209.11.16%20AM.png)
+
+
 
 ---
 
