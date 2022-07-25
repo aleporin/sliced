@@ -51,10 +51,23 @@ const deleteReview = async (req, res) => {
   }
 }
 
+const updateReview = async (req, res) => {
+  try {
+    const { reviewid } = req.params
+    const review = await Review.findByIdAndUpdate(reviewid, req.body, {
+      new: true
+    })
+    res.status(200).json(review)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getCourses,
   createReview,
   getReviews,
   getReviewsByCourse,
-  deleteReview
+  deleteReview,
+  updateReview
 }
