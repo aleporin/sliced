@@ -6,6 +6,8 @@ const router = Router()
 router.get('/', (req, res) => res.send('This is root!'))
 
 router.get('/courses', controllers.getCourses)
-router.post('/courses', controllers.createReview)
+router.post('/reviews', controllers.createReview)
+router.get('/reviews', controllers.getReviews)
+router.get('/reviews/:courseid', controllers.getReviewsByCourse)
 
 module.exports = router
