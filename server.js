@@ -1,10 +1,10 @@
-const courseController = require('./golf_server/controllers/courseController')
-
+const courseController = require('./controllers/courseController')
 const express = require('express')
 const logger = require('morgan')
 const cors = require('cors')
 const db = require('./db')
 const Course = require('./models/course.js')
+const routes = require('./routes')
 
 const PORT = process.env.PORT || 3001
 

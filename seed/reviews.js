@@ -1,5 +1,6 @@
 const db = require('../db/index')
-const { Review } = require('../models/review')
+const Chance = require('chance')
+const { Review, Course } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
