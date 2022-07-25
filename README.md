@@ -38,9 +38,9 @@
 
 ![Components Hierarchy Diagram](/assets/Screen%20Shot%202022-07-24%20at%2010.15.55%20PM.png)
 
-#### image header 2
+#### 
 
-![Yankees](https://logosmarcas.net/wp-content/uploads/2020/07/New-York-Yankees-Logotipo-1915-1946.jpg)
+!
 
 ---
 
