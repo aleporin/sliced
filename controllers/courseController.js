@@ -38,9 +38,23 @@ const getReviewsByCourse = async (req, res) => {
   }
 }
 
+const deleteReview = async (req, res) => {
+  try {
+    const { reviewid } = req.params
+    const deleted = await Review.findByIdAndDelete(reviewid)
+    if (deleted) {
+      return res.status(200).send('Review deleted')
+    }
+    throw new Error('Review not found')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   getCourses,
   createReview,
   getReviews,
-  getReviewsByCourse
+  getReviewsByCourse,
+  deleteReview
 }

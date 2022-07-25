@@ -24,7 +24,7 @@ const main = async () => {
       img: 'https://www.invitedclubs.com/globalassets/willow-creek-golf--country-club/_images/willow-creek-clubhouse-18_1920.jpg?format=webp',
       phone_num: '(631) 474-9200',
       description: `The Management & Staff at Willow Creek Golf & Country Club want you and your golf league to experience Long Island's best kept secret today. Tucked away in beautiful Mount Sinai along the north shore of Long Island, Willow Creek is the premier destination for your golf. Let us help you spend more time practicing and less time planning. Not only can we host your next event, we can also help you secure other venues for your season like the stunning Wind Watch Golf & County Club in Hauppauge.The black tees play at 6,610 yards, the blue tees at 6,289 yards, the white tees at 5,810 yards, and the red tees at 5,013 yards.`,
-      reviews: [],
+      // reviews: [],
       map_img: 'https://imgur.com/C4XowyD'
     }
   ]
