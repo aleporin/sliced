@@ -1,19 +1,20 @@
 const db = require('../db/index')
-const Chance = require('chance')
 const { Review, Course } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const Reviews = [
-    {
-      id: '1',
+  const courseId = await Course.find({ name: 'Hamlet at Wind Watch' })
+  const reviews = {
+    first_name: 'Austin',
+    last_name: 'LePorin',
+    review: {
+      course_id: courseId[0]._id,
       user: 'aleporin',
-      comment:
-        'I had an awesome round here. The clubhouse workers were all nice, and the cart girl was awesome! It was a great round, I shot a 90.',
-      rating: '10/10'
+      comment: 'Great course shot a 90',
+      rating: '5/5'
     }
-  ]
+  }
   await Review.insertMany(reviews)
   console.log('Created Reviews')
 }

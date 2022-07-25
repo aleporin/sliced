@@ -1,4 +1,4 @@
-const { Course } = require('../models')
+const { Course, Review } = require('../models')
 
 const getCourses = async (req, res) => {
   try {
@@ -9,6 +9,19 @@ const getCourses = async (req, res) => {
   }
 }
 
+const createReview = async (req, res) => {
+  try {
+    const review = await new Review(req.body)
+    await review.save()
+    return res.status(201).json({
+      plant
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 module.exports = {
-  getCourses
+  getCourses,
+  createReview
 }
