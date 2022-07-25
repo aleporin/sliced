@@ -8,7 +8,7 @@ const Course = new Schema(
     img: { type: String, required: true },
     phone_num: { type: String, required: true },
     description: { type: String, required: true },
-    reviews: { type: Schema.Types.ObjectId, ref: 'reviews_id' },
+    reviews: [{ type: Schema.Types.ObjectId, ref: 'Review' }],
     map_img: { type: String, required: true }
   },
   { timestamps: true }
