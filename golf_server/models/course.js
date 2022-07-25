@@ -8,8 +8,10 @@ const Course = new Schema(
     img: { type: String, required: true },
     phone_num: { type: String, required: true },
     description: { type: String, required: true },
-    rating: { type: String, required: true },
-    yardage: { type: String, required: true }
+    reviews: { type: Array, required: false },
+    map_img: { type: String, required: true }
   },
   { timestamps: true }
 )
+
+module.exports = Course
