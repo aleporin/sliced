@@ -9,6 +9,7 @@ router.get('/courses', controllers.getCourses)
 router.post('/reviews', controllers.createReview)
 router.get('/reviews', controllers.getReviews)
 router.get('/reviews/:courseid', controllers.getReviewsByCourse)
+router.get('/courses/:courseid', controllers.getCourseByID)
 router.put('/reviews/:reviewid', controllers.updateReview)
 router.delete('/reviews/:reviewid', controllers.deleteReview)
 

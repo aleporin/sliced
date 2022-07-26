@@ -37,6 +37,14 @@ const getReviewsByCourse = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+const getCourseByID = async (req, res) => {
+  try {
+    const course = await Course.findById(req.params.courseid)
+    return res.json(course)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
 
 const deleteReview = async (req, res) => {
   try {
@@ -69,5 +77,6 @@ module.exports = {
   getReviews,
   getReviewsByCourse,
   deleteReview,
-  updateReview
+  updateReview,
+  getCourseByID
 }
