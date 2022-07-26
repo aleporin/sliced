@@ -1,0 +1,19 @@
+* {
+  font-family: 'Bungee Inline', 'Courier New', Courier, monospace;
+  margin: 0 auto;
+  outline: none
+}
+
+body {
+  background-color: black;
+  text-align: center;
+}
+
+.sliced {
+  color:white;
+  width: 90vmin;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

@@ -49,8 +49,35 @@ const main = async () => {
       url: 'https://www.stonebridgeglcc.com/',
       img: 'https://www.golfstonebridgeutah.com/images/template/home-photo.jpg',
       phone_num: '(631) 724-7500',
-      description: `The 18-hole "Stonebridge" course at the Stonebridge Golf Links & Country Club facility in Smithtown, New York features 6,245 yards of golf from the longest tees for a par of 70 . The course rating is 71.0 and it has a slope rating of 127.`,
-      map_img: 'assets/Screen Shot 2022-07-25 at 5.29.01 PM.png'
+      description: `The 18-hole Stonebridge course at the Stonebridge Golf Links & Country Club facility in Smithtown, New York features 6,245 yards of golf from the longest tees for a par of 70 . The course rating is 71.0 and it has a slope rating of 127.`,
+      map_img: 'assets/Screen Shot 2022-07-25 at 8.53.02 PM.png'
+    },
+    {
+      name: 'The Rock Golf Club',
+      location: 'Wading River, NY',
+      url: 'https://playtherockgolf.com/',
+      img: 'https://golf-pass.brightspotcdn.com/dims4/default/1388f2d/2147483647/strip/true/crop/1440x350+0+0/resize/1440x350!/quality/90/?url=https%3A%2F%2Fgolf-pass-brightspot.s3.amazonaws.com%2F55%2Fe7%2F7c7b478d4bdbba7e8764361e0483%2F1440x350.jpg',
+      phone_num: '(631) 886-2950',
+      description: `Not far from Wading River, Great Rock offers terrific views and challenging play for golfers at every skill level. Well-groomed fairways and greens keep Great Rock difficult yet friendly, and the staff can offer tips and tricks for playing your best round.`,
+      map_img: 'assets/Screen Shot 2022-07-25 at 8.51.46 PM.png'
+    },
+    {
+      name: 'Pine Hills Golf and Country Club',
+      location: 'Manorville, NY',
+      url: 'https://www.pinehillsccgolf.com/',
+      img: 'https://golf-pass.brightspotcdn.com/dims4/default/4f0783f/2147483647/strip/true/crop/1187x668+0+386/resize/590x332!/format/jpg/quality/90/?url=https%3A%2F%2Fgolf-pass-brightspot.s3.amazonaws.com%2F5b%2F9e%2F50c9a77d7f84cd48a971a568d112%2F3362.jpg',
+      phone_num: '(631) 878-7103',
+      description: `Welcome to Pine Hills Golf & Country Club! This hidden gem is tucked away on 165 acres of Long Island's protected Pine Barrens. Once here, you will be whisked away into another land filled with plush fairways lined with majestic pine trees that will lead you to enchanted greens. Pine Hills Golf & Country Club facility in Manorville, New York features 7,132 yards of golf from the longest tees for a par of 73. The course rating is 74.4 and it has a slope rating of 131..`,
+      map_img: 'assets/Screen Shot 2022-07-25 at 9.02.46 PM.png'
+    },
+    {
+      name: 'Town of Osyter Bay Golf Course ',
+      location: 'Woodbury, NY',
+      url: 'https://oysterbaytown.com/departments/parks/golf-course/',
+      img: 'https://www.golfonlongisland.com/.a/6a00e553e875538833017eeb41420d970d-600wi',
+      phone_num: '(516) 677-5980',
+      description: `Situated on 121 acres, the Town's 18-hole, par 70, championship golf course features narrow fairways, water holes, sand and grass bunkers, as well as a putting green. A turn-of-the-century mansion offers The Mansion at Oyster Bay Catering facility and Clubhouse Grille. Golfers can also take a break at the “Halfway House”, located on the 8th tee, with amenities such as restroom facilities and a snack bar.`,
+      map_img: 'assets/Screen Shot 2022-07-25 at 9.07.26 PM.png'
     }
   ]
   await Course.insertMany(courses)
