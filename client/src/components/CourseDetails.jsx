@@ -3,56 +3,24 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
 
-const CourseDetails = () => {
+const CourseDetails = ({
+  reviewState,
+  handleChange,
+  handleSubmit,
+  toggleShowForm,
+  showForm
+}) => {
   const [courseDetails, setCourseDetails] = useState([])
-  const [reviews, setReviews] = useState([])
-  const initialState = {
-    user: '',
-    comment: '',
-    rating: '',
-    course: ''
-  }
-  const [reviewState, setReviewState] = useState(initialState)
 
   let { courseid } = useParams()
   console.log(courseid)
-
+  const getCourseId = async () => {
+    const res = await axios.get(`http://localhost:3001/api/courses/${courseid}`)
+    setCourseDetails(res.data)
+  }
   useEffect(() => {
-    const getCourseId = async () => {
-      const res = await axios.get(
-        `http://localhost:3001/api/courses/${courseid}`
-      )
-      setCourseDetails(res.data)
-    }
-    const getReviews = async () => {
-      try {
-        let res = await axios.get(
-          `http://localhost:3001/api/reviews/${courseid}`
-        )
-        setReviews(res.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getReviews()
     getCourseId()
   }, [])
-
-  const handleChange = (event) => {
-    setReviewState({ ...reviewState, [event.target.id]: event.target.value })
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    setReviewState({ ...reviewState, course: courseid })
-    console.log(reviewState)
-    let res = await axios.post(
-      `http://localhost:3001/api/reviews/`,
-      reviewState
-    )
-    console.log(res)
-    setReviewState(initialState)
-  }
 
   return (
     <div>
@@ -67,11 +35,16 @@ const CourseDetails = () => {
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
       </div>
-      <ReviewForm
-        reviewState={reviewState}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
+      <div>
+        {!showForm && <button onClick={toggleShowForm}>Leave a review?</button>}
+      </div>
+      {showForm && (
+        <ReviewForm
+          reviewState={reviewState}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+      )}
     </div>
   )
 }

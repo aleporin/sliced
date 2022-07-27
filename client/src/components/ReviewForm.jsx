@@ -1,7 +1,14 @@
+import { useParams } from 'react-router-dom'
+
 const ReviewForm = ({ handleChange, handleSubmit, reviewState }) => {
+  let { courseid } = useParams()
+  console.log(courseid)
   return (
     <div className="form-field">
-      <form onSubmit={handleSubmit} className="review-field">
+      <form
+        onSubmit={(e) => handleSubmit(e, courseid)}
+        className="review-field"
+      >
         <input
           type="text"
           id="user"
