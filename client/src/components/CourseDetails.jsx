@@ -7,9 +7,9 @@ const CourseDetails = () => {
   const [reviews, setReviews] = useState([])
   const initialState = {
     user: '',
-    course: '',
     comment: '',
-    rating: ''
+    rating: '',
+    course: ''
   }
   const [reviewState, setReviewState] = useState(initialState)
 
@@ -29,7 +29,7 @@ const CourseDetails = () => {
   useEffect(() => {
     const getReviews = async () => {
       try {
-        let res = await axios.get('http://localhost:3001/reviews')
+        let res = await axios.get('http://localhost:3001/api/reviews')
         setReviews(res.data)
       } catch (err) {
         console.log(err)
@@ -44,10 +44,15 @@ const CourseDetails = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.post('http://localhost:3001/issues', reviewState)
+    setReviewState({ ...reviewState, course: courseid })
+    let res = await axios.post(
+      `http://localhost:3001/api/reviews/`,
+      setReviewState
+    )
     console.log(res)
     setReviewState(initialState)
   }
+
   return (
     <div>
       <h1>{courseDetails.name}</h1>
@@ -61,8 +66,8 @@ const CourseDetails = () => {
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
       </div>
-      <div>
-        <form>
+      <div className="form-field">
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             id="user"
@@ -70,10 +75,30 @@ const CourseDetails = () => {
             onChange={handleChange}
             value={reviewState.user}
           />
-          <input placeholder=""></input>
-          <input placeholder=""></input>
-          <textarea placeholder=""></textarea>
+          <select
+            id="rating"
+            onChange={handleChange}
+            value={reviewState.rating}
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <textarea
+            id="comment"
+            cols="20"
+            rows="5"
+            onChange={handleChange}
+            value={reviewState.comment}
+            placeholder="Leave a review?"
+            className="reviewField"
+          ></textarea>
+          <button type="submit" placeholder="Leave Review?"></button>
         </form>
+        <h1>{reviewState.comment}</h1>
       </div>
     </div>
   )
