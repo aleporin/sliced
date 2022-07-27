@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import ReviewForm from './ReviewForm'
 
 const CourseDetails = () => {
   const [courseDetails, setCourseDetails] = useState([])
@@ -23,19 +24,18 @@ const CourseDetails = () => {
       )
       setCourseDetails(res.data)
     }
-    getCourseId()
-  }, [])
-
-  useEffect(() => {
     const getReviews = async () => {
       try {
-        let res = await axios.get('http://localhost:3001/api/reviews')
+        let res = await axios.get(
+          `http://localhost:3001/api/reviews/${courseid}`
+        )
         setReviews(res.data)
       } catch (err) {
         console.log(err)
       }
     }
     getReviews()
+    getCourseId()
   }, [])
 
   const handleChange = (event) => {
@@ -45,9 +45,10 @@ const CourseDetails = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     setReviewState({ ...reviewState, course: courseid })
+    console.log(reviewState)
     let res = await axios.post(
       `http://localhost:3001/api/reviews/`,
-      setReviewState
+      reviewState
     )
     console.log(res)
     setReviewState(initialState)
@@ -66,42 +67,11 @@ const CourseDetails = () => {
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
       </div>
-      <div className="form-field">
-        <form onSubmit={handleSubmit} className="review-field">
-          <input
-            type="text"
-            id="user"
-            placeholder="username"
-            onChange={handleChange}
-            value={reviewState.user}
-            className="user"
-          />
-          <select
-            id="rating"
-            onChange={handleChange}
-            value={reviewState.rating}
-          >
-            <option>Rate this course out of 5</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-
-          <textarea
-            id="comment"
-            cols="20"
-            rows="5"
-            onChange={handleChange}
-            value={reviewState.comment}
-            placeholder="Leave a review?"
-            className="reviewField"
-          ></textarea>
-          <button type="submit">Submit</button>
-        </form>
-        <div className="reviewSubmit"></div>
-      </div>
+      <ReviewForm
+        reviewState={reviewState}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
     </div>
   )
 }
