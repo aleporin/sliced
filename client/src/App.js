@@ -32,7 +32,7 @@ function App() {
             element={<Courses courses={courses} key={courses._id} />}
           />
           <Route
-            path="/courses/:id"
+            path="/courses/:courseid"
             element={<CourseDetails courses={courses} />}
           />
         </Routes>

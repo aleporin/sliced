@@ -26,7 +26,7 @@ const Courses = (props) => {
           <div
             className="courseCard"
             onClick={() => showCourses(course)}
-            key={course._id}
+            key={course.id}
             style={{
               minWidth: '60em'
             }}

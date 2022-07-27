@@ -3,6 +3,7 @@
   font-family: 'Bungee Inline', 'Courier New', Courier, monospace;
   outline: none;
   box-sizing: border-box;
+  color: white;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
 .navSliced {
   font-size: 1.5rem;
   text-decoration: none;
+  color: black;
 }
 
 .nav ul {
@@ -50,7 +52,8 @@ body {
   text-decoration: none;
 }
 
-h1 {
+h1,
+h2 {
   color: white;
   display: flex;
   justify-content: center;
@@ -72,4 +75,16 @@ h1 {
 img {
   width: 50%;
   height: 50%;
+}
+
+.oneImage {
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.details {
+  display: block;
 }

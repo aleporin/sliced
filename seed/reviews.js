@@ -7,8 +7,6 @@ const main = async () => {
   Review.collection.drop()
   const courseId = await Course.findOne({ name: 'Hamlet at Wind Watch' })
   const reviews = {
-    first_name: 'Austin',
-    last_name: 'LePorin',
     user: 'aleporin',
     comment: 'Great course shot a 90',
     rating: '5/5',
