@@ -4,16 +4,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Courses = ({ courses }) => {
-  // const [courses, setCourses] = useState([])
   let navigate = useNavigate()
-  // useEffect(() => {
-  //   const getCourses = async () => {
-  //     const res = await axios.get('http://localhost:3001/api/courses')
-  //     setCourses(res.data.courses)
-  //     console.log(res.data.courses)
-  //   }
-  //   getCourses()
-  // }, [])
 
   const showCourses = (course) => {
     navigate(`${course._id}`)

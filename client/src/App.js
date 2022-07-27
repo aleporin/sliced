@@ -34,17 +34,15 @@ function App() {
   let { courseid } = useParams()
   console.log(courseid)
 
-  useEffect(() => {
-    const getReviews = async () => {
-      try {
-        let res = await axios.get(
-          `http://localhost:3001/api/reviews/${courseid}`
-        )
-        setReviews(res.data)
-      } catch (err) {
-        console.log(err)
-      }
+  const getReviews = async () => {
+    try {
+      let res = await axios.get(`http://localhost:3001/api/reviews`)
+      setReviews(res.data)
+    } catch (err) {
+      console.log(err)
     }
+  }
+  useEffect(() => {
     getReviews()
   }, [])
 
@@ -66,6 +64,7 @@ function App() {
     })
     toggleShowForm()
     setReviewState(initialState)
+    getReviews()
   }
 
   return (
@@ -89,6 +88,7 @@ function App() {
                 handleSubmit={handleSubmit}
                 toggleShowForm={toggleShowForm}
                 showForm={showForm}
+                reviews={reviews}
               />
             }
           />

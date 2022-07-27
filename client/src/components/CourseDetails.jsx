@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
+import ReviewList from './ReviewList'
 
 const CourseDetails = ({
   reviewState,
   handleChange,
   handleSubmit,
   toggleShowForm,
-  showForm
+  showForm,
+  reviews
 }) => {
   const [courseDetails, setCourseDetails] = useState([])
 
@@ -36,14 +38,22 @@ const CourseDetails = ({
         <ul>{courseDetails.url}</ul>
       </div>
       <div>
-        {!showForm && <button onClick={toggleShowForm}>Leave a review?</button>}
+        {showForm && (
+          <ReviewForm
+            reviewState={reviewState}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            reviews={reviews}
+          />
+        )}
       </div>
-      {showForm && (
-        <ReviewForm
-          reviewState={reviewState}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
+      <div>
+        <ReviewList courseid={courseid} reviews={reviews} />
+      </div>
+      {!showForm && (
+        <button onClick={toggleShowForm} className="enterReview">
+          Leave a review?
+        </button>
       )}
     </div>
   )

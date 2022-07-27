@@ -4,7 +4,7 @@ const ReviewForm = ({ handleChange, handleSubmit, reviewState }) => {
   let { courseid } = useParams()
   console.log(courseid)
   return (
-    <div className="form-field">
+    <div className="form-container">
       <form
         onSubmit={(e) => handleSubmit(e, courseid)}
         className="review-field"

@@ -23,7 +23,6 @@ body {
   flex-direction: column;
   text-align: center;
   font-family: 'Bungee Inline', 'Courier New', Courier, monospace;
-  /* margin: auto; */
 }
 
 .nav {
@@ -93,7 +92,7 @@ select {
   color: black;
 }
 .reviewField {
-  width: 50.5vw;
+  width: 20vw;
   height: 10vh;
   color: black;
 }
@@ -101,18 +100,25 @@ select {
 .user {
   color: black;
 }
-.form-field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-button {
-  display: flex;
+.form-container {
+  padding: 10px;
+  background: white;
+  width: 60vh;
+  border-radius: 10px;
+  margin: auto;
 }
 
 button {
   color: black;
-  height: 5vh;
+  height: 3vh;
   width: 10vh;
+}
+
+.enterReview {
+  padding: 10px;
+  background: white;
+  width: 10%;
+  height: 10vh;
+  border-radius: 10px;
+  margin: auto;
 }
