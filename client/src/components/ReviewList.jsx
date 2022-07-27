@@ -20,8 +20,8 @@ const ReviewList = ({ courseid, reviews }) => {
   return (
     <div>
       {reviewByCourse?.map((review) => (
-        <div>
-          {review.comment}
+        <div className="singleReview">
+          <div className="commentBox">Comment:{review.comment}</div>
           <button onClick={() => deleteReview(review._id)}>delete</button>
         </div>
       ))}
