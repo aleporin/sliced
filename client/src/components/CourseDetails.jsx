@@ -67,19 +67,21 @@ const CourseDetails = () => {
         <ul>{courseDetails.url}</ul>
       </div>
       <div className="form-field">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="review-field">
           <input
             type="text"
             id="user"
             placeholder="username"
             onChange={handleChange}
             value={reviewState.user}
+            className="user"
           />
           <select
             id="rating"
             onChange={handleChange}
             value={reviewState.rating}
           >
+            <option>Rate this course out of 5</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -96,9 +98,9 @@ const CourseDetails = () => {
             placeholder="Leave a review?"
             className="reviewField"
           ></textarea>
-          <button type="submit" placeholder="Leave Review?"></button>
+          <button type="submit">Submit</button>
         </form>
-        <h1>{reviewState.comment}</h1>
+        <div className="reviewSubmit"></div>
       </div>
     </div>
   )
