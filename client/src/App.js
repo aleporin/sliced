@@ -9,6 +9,7 @@ import CourseDetails from './components/CourseDetails'
 import { useParams } from 'react-router-dom'
 import { Navigate, useNavigate } from 'react-router-dom'
 import AddCourse from './components/AddCourse'
+import AllCourses from './components/AllCourses'
 
 function App() {
   const [courses, setCourses] = useState([])
@@ -111,15 +112,8 @@ function App() {
             }
           />
           <Route
-            path="/addcourse"
-            element={
-              <AddCourse
-                addCourse={addCourse}
-                defaultCourseState={defaultCourseState}
-                newCourse={newCourse}
-                getCourses={getCourses}
-              />
-            }
+            path="/allcourses"
+            element={<AllCourses courses={courses} getCourses={getCourses} />}
           />
         </Routes>
       </body>

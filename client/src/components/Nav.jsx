@@ -13,12 +13,12 @@ const Nav = () => {
         <li>
           <Link to="/courses" className="navSliced">
             {' '}
-            Golf Courses
+            Featured Courses
           </Link>
-          {/* <Link to="/addcourse" className="navSliced">
+          <Link to="/allcourses" className="navSliced">
             {' '}
-            Add Course
-          </Link> */}
+            View All Courses
+          </Link>
         </li>
       </ul>
     </nav>
