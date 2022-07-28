@@ -7,6 +7,7 @@ router.get('/', (req, res) => res.send('This is root!'))
 
 router.get('/courses', controllers.getCourses)
 router.post('/reviews', controllers.createReview)
+router.post('/courses', controllers.createCourse)
 router.get('/reviews', controllers.getReviews)
 router.get('/reviews/:courseid', controllers.getReviewsByCourse)
 router.get('/courses/:courseid', controllers.getCourseByID)
