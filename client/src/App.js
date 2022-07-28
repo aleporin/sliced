@@ -8,6 +8,7 @@ import Courses from './components/Courses'
 import CourseDetails from './components/CourseDetails'
 import { useParams } from 'react-router-dom'
 import { Navigate, useNavigate } from 'react-router-dom'
+import AddCourse from './components/AddCourse'
 
 function App() {
   const [courses, setCourses] = useState([])
@@ -19,15 +20,26 @@ function App() {
     rating: '',
     course: ''
   }
+  const [addCourse, setAddCourse] = useState([])
+  const defaultCourseState = {
+    name: '',
+    location: '',
+    url: '',
+    img: '',
+    phone_num: '',
+    description: ''
+  }
+
+  const [newCourse, setNewCourse] = useState(defaultCourseState)
   const [reviewState, setReviewState] = useState(initialState)
   const [showForm, setShowForm] = useState(false)
 
+  const getCourses = async () => {
+    const res = await axios.get('http://localhost:3001/api/courses')
+    setCourses(res.data.courses)
+    console.log(res.data.courses)
+  }
   useEffect(() => {
-    const getCourses = async () => {
-      const res = await axios.get('http://localhost:3001/api/courses')
-      setCourses(res.data.courses)
-      console.log(res.data.courses)
-    }
     getCourses()
   }, [])
 
@@ -77,7 +89,13 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route
             path="/courses"
-            element={<Courses courses={courses} courseid={courseid} />}
+            element={
+              <Courses
+                courses={courses}
+                courseid={courseid}
+                getCourses={getCourses}
+              />
+            }
           />
           <Route
             path="/courses/:courseid"
@@ -89,6 +107,17 @@ function App() {
                 toggleShowForm={toggleShowForm}
                 showForm={showForm}
                 reviews={reviews}
+              />
+            }
+          />
+          <Route
+            path="/addcourse"
+            element={
+              <AddCourse
+                addCourse={addCourse}
+                defaultCourseState={defaultCourseState}
+                newCourse={newCourse}
+                getCourses={getCourses}
               />
             }
           />

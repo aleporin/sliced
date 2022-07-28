@@ -15,6 +15,10 @@ const Nav = () => {
             {' '}
             Golf Courses
           </Link>
+          {/* <Link to="/addcourse" className="navSliced">
+            {' '}
+            Add Course
+          </Link> */}
         </li>
       </ul>
     </nav>
