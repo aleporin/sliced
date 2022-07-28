@@ -70,11 +70,16 @@ select {
   color: black;
 }
 .form-container {
-  padding: 10px;
-  background: white;
-  width: 60vh;
-  border-radius: 10px;
-  margin: auto;
+  width: 60vw;
+  border: 2px solid black;
+  padding-bottom: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-bottom: 1vh;
+  background-color: white;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
 }
 
 button {
@@ -109,4 +114,17 @@ button {
 .coursesHeader {
   display: flex;
   justify-content: center;
+}
+
+.reviewHeader {
+  color: black;
+}
+
+.formStyle {
+}
+
+.userRating {
+}
+
+.reviewSubmitBtn {
 }

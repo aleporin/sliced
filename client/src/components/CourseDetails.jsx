@@ -33,20 +33,24 @@ const CourseDetails = ({
       <div className="location">
         <h2>{courseDetails.location}</h2>
       </div>
+      <h3>{courseDetails.description}</h3>
       <div className="courseDescription">
-        <h3>{courseDetails.description}</h3>
+        <div className="courseDesc"></div>
+        <img src={courseDetails.img} />
+        <img src={courseDetails.map_img} />
       </div>
       <div className="phoneNum">
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
       </div>
+      <div className="leaveReview">
+        {!showForm && (
+          <button onClick={toggleShowForm} className="enterReview">
+            Leave a review?
+          </button>
+        )}
+      </div>
 
-      <div className="coursePic">
-        <img src={courseDetails.img} />
-      </div>
-      <div className="mapImg">
-        <img src={courseDetails.map_img} />
-      </div>
       <div>
         {showForm && (
           <ReviewForm
@@ -59,13 +63,6 @@ const CourseDetails = ({
       </div>
       <div>
         <ReviewList courseid={courseid} reviews={reviews} />
-      </div>
-      <div className="leaveReview">
-        {!showForm && (
-          <button onClick={toggleShowForm} className="enterReview">
-            Leave a review?
-          </button>
-        )}
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ const Nav = () => {
       <div>
         <Link to="" className="navSliced">
           {' '}
-          <img src="https://i.imgur.com/3GLUEQJ.png" width={100} height={60} />
+          <img src="https://i.imgur.com/VMyxiv5.png" width={50} height={31} />
         </Link>
       </div>
       <ul>
