@@ -23,7 +23,7 @@ const Courses = ({ courses, getCourses }) => {
       )}
       {!newCourse && <button onClick={toggleNewCourse}>Add New Course?</button>}
       <div className="allCourses">
-        {courses.map((course) => (
+        {courses.slice(-7).map((course) => (
           <div onClick={() => showCourses(course)} key={course.id}>
             <h3>{course.name}</h3>
             <img src={course.img} className="courseMap" />
