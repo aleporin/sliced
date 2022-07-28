@@ -28,6 +28,17 @@ const createReview = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
+const createCourse = async (req, res) => {
+  try {
+    const review = await new Course(req.body)
+    await review.save()
+    return res.status(201).json({
+      review
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
 
 const getReviewsByCourse = async (req, res) => {
   try {
@@ -78,5 +89,6 @@ module.exports = {
   getReviewsByCourse,
   deleteReview,
   updateReview,
-  getCourseByID
+  getCourseByID,
+  createCourse
 }
