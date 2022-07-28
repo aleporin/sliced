@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import EditForm from './EditForm'
 
 const ReviewList = ({ courseid, reviews }) => {
   const [reviewByCourse, setReviewsByCourse] = useState([])
@@ -28,19 +29,24 @@ const ReviewList = ({ courseid, reviews }) => {
 
   return (
     <div>
-      <form>
-        {reviewByCourse?.map((review) => (
-          <div className="singleReview">
-            <div className="commentBox">Comment:{review.comment}</div>
-            <div className="commentBox">Username:{review.user}</div>
-            <div className="commentBox">{review.rating}/5</div>
-            <button onClick={() => deleteReview(review._id)}>delete</button>
-            <div>
-              <button onClick={() => toggleReview(true)}>edit</button>
-            </div>
+      {reviewByCourse?.map((review) => (
+        <div className="singleReview">
+          {editReview && (
+            <EditForm
+              review={review}
+              toggleReview={toggleReview}
+              getReviews={getReviews}
+            />
+          )}
+          <div className="commentBox">Comment:{review.comment}</div>
+          <div className="commentBox">Username:{review.user}</div>
+          <div className="commentBox">{review.rating}/5</div>
+          <button onClick={() => deleteReview(review._id)}>delete</button>
+          <div>
+            {!editReview && <button onClick={toggleReview}>edit</button>}
           </div>
-        ))}
-      </form>
+        </div>
+      ))}
     </div>
   )
 }
