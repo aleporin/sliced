@@ -1,0 +1,29 @@
+/* .addCourseForm {
+  padding: 10px;
+  background: white;
+  width: 60vh;
+  border-radius: 10px;
+  margin: auto;
+} */
+
+.idek {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.view {
+  height: 35px;
+}
+
+.addBtn {
+  width: 100px;
+  height: 32px;
+}

@@ -36,7 +36,7 @@ const AddCourse = ({ toggleNewCourse, getCourses }) => {
           type="text"
           id="img"
           onChange={handleChange}
-          placeholder="Add image (optional)"
+          placeholder="Add image"
         />
         <input
           type="text"

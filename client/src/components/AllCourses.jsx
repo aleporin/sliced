@@ -1,14 +1,15 @@
 import React from 'react'
+import '../styles/allCourses.css'
 
 const AllCourses = ({ courses }) => {
   return (
-    <div>
-      <div>
-        <h1> All Courses </h1>
+    <div className="lastPage">
+      <h1> All Courses </h1>
+      <div className="div">
         {courses.map((course) => (
           <div>
             <h3>{course.name}</h3>
-            <img src={course.img} />
+            <img src={course.img} className="courseMap" />
           </div>
         ))}
       </div>
