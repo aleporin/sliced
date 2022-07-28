@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
 import ReviewList from './ReviewList'
+import '../styles/courseDetails.css'
 
 const CourseDetails = ({
   reviewState,
@@ -26,16 +27,25 @@ const CourseDetails = ({
 
   return (
     <div>
-      <h1>{courseDetails.name}</h1>
-      <h2>{courseDetails.location}</h2>
-      <h3>{courseDetails.description}</h3>
-      <div className="oneImage">
-        <img src={courseDetails.img} />
-        <img src={courseDetails.map_img} />
+      <div className="courseName">
+        <h1>{courseDetails.name}</h1>
       </div>
-      <div className="details">
+      <div className="location">
+        <h2>{courseDetails.location}</h2>
+      </div>
+      <div className="courseDescription">
+        <h3>{courseDetails.description}</h3>
+      </div>
+      <div className="phoneNum">
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
+      </div>
+
+      <div className="coursePic">
+        <img src={courseDetails.img} />
+      </div>
+      <div className="mapImg">
+        <img src={courseDetails.map_img} />
       </div>
       <div>
         {showForm && (
@@ -50,11 +60,13 @@ const CourseDetails = ({
       <div>
         <ReviewList courseid={courseid} reviews={reviews} />
       </div>
-      {!showForm && (
-        <button onClick={toggleShowForm} className="enterReview">
-          Leave a review?
-        </button>
-      )}
+      <div className="leaveReview">
+        {!showForm && (
+          <button onClick={toggleShowForm} className="enterReview">
+            Leave a review?
+          </button>
+        )}
+      </div>
     </div>
   )
 }

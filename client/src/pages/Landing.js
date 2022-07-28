@@ -1,8 +1,8 @@
 const Landing = () => {
   return (
     <div className="sliced">
-      <h1> sliced</h1>
-      <h4>hit 'em straight</h4>
+      <img src="https://i.imgur.com/3GLUEQJ.png" />
+      <h1>hit 'em straight</h1>
     </div>
   )
 }

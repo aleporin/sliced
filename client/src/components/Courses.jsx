@@ -10,20 +10,13 @@ const Courses = ({ courses }) => {
     navigate(`${course._id}`)
   }
   return (
-    <div>
+    <div className="flex">
       <h1>Golf Courses</h1>
       <div className="allCourses">
         {courses.map((course) => (
-          <div
-            className="courseCard"
-            onClick={() => showCourses(course)}
-            key={course.id}
-            style={{
-              minWidth: '60em'
-            }}
-          >
+          <div onClick={() => showCourses(course)} key={course.id}>
             <h3>{course.name}</h3>
-            <img src={course.img} />
+            <img src={course.img} className="courseMap" />
           </div>
         ))}
       </div>

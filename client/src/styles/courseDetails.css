@@ -1,0 +1,42 @@
+.coursePic {
+  min-height: 300;
+  border: 1px solid blue;
+}
+
+.mapImg {
+  border: 10px solid green;
+}
+.mapImg img {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+.phoneNum {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.courseName {
+  display: flex;
+  justify-content: center;
+}
+.location {
+  display: flex;
+  justify-content: center;
+}
+.courseDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  border: 5px solid white;
+  padding: 50px;
+  margin: auto;
+}
+
+.leaveReview {
+  border: 2px solid red;
+}
