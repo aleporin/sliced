@@ -8,27 +8,27 @@
 }
 
 .courseDesc {
-  position: relative;
   top: 25px;
   left: 25px;
   padding: 10px;
   display: flex;
-  flex: 1;
-  display: flex;
+  justify-content: left;
+  /* border: 2px solid red; */
+  width: 50%;
+  float: left;
 }
 .image1 {
-  width: 25%;
-  position: relative;
+  width: 500px;
   top: 0;
   left: 0;
-  width: 50%;
+  float: left;
 }
 .image2 {
-  width: 25%;
-  position: absolute;
-  bottom: 15px;
-  left: 9px;
-  width: 25%;
+  /* position: absolute; */
+  bottom: 160px;
+  left: 250px;
+  width: 500px;
+  float: right;
 }
 
 .desc {
@@ -45,4 +45,30 @@
 
 .enterReview {
   cursor: pointer;
+}
+
+.h3 {
+  align-items: center;
+  width: 70%;
+  font-size: 15px;
+}
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.reviewss {
+  /* border: 2px solid blue; */
+  width: 650px;
+  overflow: hidden;
+  height: 500px;
+}
+
+.wrapper {
+  width: 100%;
+  /* border: 1px solid white; */
+  overflow: hidden;
 }

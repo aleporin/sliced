@@ -5,7 +5,10 @@ const AllCourses = ({ courses }) => {
   return (
     <div className="lastPage">
       <h1> All Courses </h1>
-      <div className="div">
+      <div
+        className="coursesCards
+      "
+      >
         {courses.map((course) => (
           <div>
             <h3>{course.name}</h3>

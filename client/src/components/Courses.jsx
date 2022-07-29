@@ -38,7 +38,7 @@ const Courses = ({ courses, getCourses }) => {
           )}
         </div>
         <div className="idek">
-          {courses.slice(-6).map((course) => (
+          {courses.slice(-5).map((course) => (
             <div onClick={() => showCourses(course)} key={course.id}>
               <h3>{course.name}</h3>
               <img src={course.img} className="courseMap" />

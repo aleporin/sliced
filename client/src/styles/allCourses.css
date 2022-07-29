@@ -1,0 +1,18 @@
+/* .coursesCards {
+  display: flex;
+  padding: 5em;
+  width: 18em;
+  height: 100%;
+  margin: 1em;
+  justify-content: space-around;
+} */
+
+.lastPage {
+  display: flex;
+  padding: 5em;
+  width: 18em;
+  height: 100%;
+  margin: 1em;
+  align-items: center;
+  text-align: center;
+}

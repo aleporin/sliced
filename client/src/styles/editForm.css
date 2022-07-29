@@ -1,13 +1,9 @@
 .commentBox {
-  width: 30vw;
+  padding: 10px;
+  background: black;
+  width: 60vh;
+  border-radius: 10px;
+  margin: auto;
   border: 2px solid black;
-  padding-bottom: 2vh;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  margin-bottom: 1vh;
-  background-color: white;
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-  height: 9vw;
+  color: white;
 }

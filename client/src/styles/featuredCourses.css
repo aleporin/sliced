@@ -23,3 +23,11 @@
 h3 {
   color: white;
 }
+
+.view {
+  cursor: pointer;
+}
+
+.addBtn {
+  cursor: pointer;
+}
