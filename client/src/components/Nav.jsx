@@ -11,16 +11,14 @@ const Nav = () => {
         </Link>
       </div>
       <ul>
-        <li>
-          <Link to="/courses" className="navSliced">
-            {' '}
-            Featured Courses
-          </Link>
-          <Link to="/allcourses" className="navSliced">
-            {' '}
-            View All Courses
-          </Link>
-        </li>
+        <Link to="/courses" className="navSliced">
+          {' '}
+          Featured Courses
+        </Link>
+        <Link to="/allcourses" className="navSliced">
+          {' '}
+          View All Courses
+        </Link>
       </ul>
     </nav>
   )

@@ -1,4 +1,4 @@
-# Golf Project
+# sliced
 
 ## Date: 07/24/2022
 
@@ -8,16 +8,18 @@
 
 ---
 
+![Logo](/assets/Untitled%20135.PNG)
+
 ### **_Description_**
 
-####  In this week long MERN application I built a Long Island golf course review app. Since 2020, I have gotten into golf as a hobby, and wanted to create a forum for users to be able to converse and rate courses that they have played. The goal of my application is to inform potential golfers of the course they are preparing to play and open up a dialogue for strategy, banter, and fun. 
+#### In this week long MERN application I built a Long Island golf course review app. Since 2020, I have gotten into golf as a hobby, and wanted to create a forum for users to be able to converse and rate courses that they have played. The goal of my application is to inform potential golfers of the course they are preparing to play and open up a dialogue for strategy, banter, and fun.
 
 ---
 
 ### **_Technologies Used_**
 
 - React.js
-- Javascript 
+- Javascript
 - MongoDB
 - Mongoose/Express
 - Node.js
@@ -34,15 +36,13 @@
 
 ### **_Screenshots_**
 
-#### Components Hierarchy Diagram
+#### Featured Courses Page
 
-![Components Hierarchy Diagram](/assets/Screen%20Shot%202022-07-24%20at%2010.15.55%20PM.png)
+![Featured Courses Page](/assets/Screen%20Shot%202022-07-29%20at%2012.33.05%20AM.png)
 
 #### ERD
 
 ![ERD](/assets/Screen%20Shot%202022-07-25%20at%209.11.16%20AM.png)
-
-
 
 ---
 
@@ -55,10 +55,10 @@
 
 ### **_Credits_**
 
-##### 
+#####
 
-##### 
+#####
 
-##### 
+#####
 
 ---
