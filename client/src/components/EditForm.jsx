@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import '../styles/courseDetails.css'
 
 const EditForm = ({ review, toggleReview, getReviews }) => {
   const initialState = {

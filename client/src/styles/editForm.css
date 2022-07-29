@@ -1,10 +1,4 @@
-.reviewHeader {
-}
-
-h1 {
-  align-items: center;
-}
-.form-container {
+.commentBox {
   width: 30vw;
   border: 2px solid black;
   padding-bottom: 2vh;
@@ -16,17 +10,4 @@ h1 {
   align-content: center;
   flex-direction: column;
   height: 9vw;
-}
-
-.reviewField {
-  width: 30vw;
-}
-
-.userRating {
-  display: flex;
-  justify-content: space-between;
-}
-
-.enterReview {
-  height: 3vw;
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import EditForm from './EditForm'
+import '../styles/editForm.css'
 
 const ReviewList = ({ courseid, reviews }) => {
   const [reviewByCourse, setReviewsByCourse] = useState([])
