@@ -5,7 +5,7 @@ let dbUrl =
     ? process.env.MONGODB_URI
     : 'mongodb://127.0.0.1:27017/slicedDB'
 mongoose
-  .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .connect(dbUrl)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
