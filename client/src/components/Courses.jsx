@@ -21,7 +21,6 @@ const Courses = ({ courses, getCourses }) => {
       <div className="featured">
         <h1>Featured Golf Courses</h1>
         <h3>Contribute to our community by adding a new course</h3>
-        <div className="newDiv"></div>
         <div className="addCourseForm">
           {newCourse && (
             <AddCourse
@@ -30,6 +29,7 @@ const Courses = ({ courses, getCourses }) => {
             />
           )}
         </div>
+        <div className="newDiv"></div>
         <div className="allCourses">
           {!newCourse && (
             <button onClick={toggleNewCourse} className="addBtn">
