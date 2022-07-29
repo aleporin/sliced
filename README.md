@@ -4,7 +4,7 @@
 
 ### By: Austin LePorin
 
-[GitHub](https://github.com/aleporin/golf_project) | [LinkedIn](https://www.linkedin.com/in/austin-leporin/) | [Trello](https://trello.com/b/TcKZhF8h/golf-project)
+[GitHub](https://github.com/aleporin/golf_project) | [LinkedIn](https://www.linkedin.com/in/austin-leporin/) |
 
 ---
 
@@ -30,7 +30,7 @@
 
 #### Users will naviagte cleanly through my application with the freedom to post and delete any feedback they want regarding their experiences with a golf course. Users will also to read other folks experiences with golf courses that they are getting ready to play. Have fun and hit 'em straight!
 
-#### My deployed application can be viewed [here](URL).
+#### My deployed application can be viewed [here](https://sliced.herokuapp.com/).
 
 ---
 
@@ -38,18 +38,19 @@
 
 #### Featured Courses Page
 
-![Featured Courses Page](/assets/Screen%20Shot%202022-07-29%20at%2012.33.05%20AM.png)
+![Featured Courses Page](/assets/Screen%20Shot%202022-07-29%20at%201.30.04%20PM.png)
 
-#### ERD
+#### All Courses Page
 
-![ERD](/assets/Screen%20Shot%202022-07-25%20at%209.11.16%20AM.png)
+![All Courses Page](/assets/Screen%20Shot%202022-07-29%20at%201.30.23%20PM.png)
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Future Update 1
-- [ ] Future Update 2
+- [ ] Course Description Page
+- [ ] Golf Course API
+- [ ]
 
 ---
 
