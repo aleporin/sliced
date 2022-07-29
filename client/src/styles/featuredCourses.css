@@ -3,14 +3,6 @@
   text-align: center;
 }
 
-.idek {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .courseMap {
   height: auto;
   max-height: 250px;
@@ -30,4 +22,13 @@ h3 {
 
 .addBtn {
   cursor: pointer;
+}
+
+.titleCourse {
+  color: white;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+console.log(process.env.NODE_ENV)
 let dbUrl =
   process.env.NODE_ENV === 'production'
     ? process.env.MONGODB_URI

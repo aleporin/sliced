@@ -19,7 +19,7 @@ const CourseDetails = ({
   let { courseid } = useParams()
   console.log(courseid)
   const getCourseId = async () => {
-    const res = await axios.get(`http://localhost:3001/api/courses/${courseid}`)
+    const res = await axios.get(`/api/courses/${courseid}`)
     setCourseDetails(res.data)
   }
   useEffect(() => {
@@ -28,15 +28,15 @@ const CourseDetails = ({
 
   return (
     <div className="singleDescriptions">
-      <div className="courseName">
+      <div className="location-description">
         <h1>{courseDetails.name}</h1>
-      </div>
-      <div className="location">
         <h2>{courseDetails.location}</h2>
+        <h3>{courseDetails.description}</h3>
+        <ul>{courseDetails.phone_num}</ul>
+        <ul>{courseDetails.url}</ul>
       </div>
 
       <div className="h3">
-        <h3>{courseDetails.description}</h3>
         {!showForm && (
           <button onClick={toggleShowForm} className="enterReview">
             Leave a review?
@@ -45,28 +45,26 @@ const CourseDetails = ({
       </div>
       <div className="wrapper">
         <div className="courseDesc">
-          <div>
+          <div className="map-img">
             <img src={courseDetails.map_img} className="image2" />
             <img src={courseDetails.img} className="image1" />
+            <div className="reviewss">
+              <div>
+                {showForm && (
+                  <ReviewForm
+                    reviewState={reviewState}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    reviews={reviews}
+                  />
+                )}
+              </div>
+              <div className="reviewlist">
+                <ReviewList courseid={courseid} reviews={reviews} />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="reviewss">
-          <div>
-            {showForm && (
-              <ReviewForm
-                reviewState={reviewState}
-                handleChange={handleChange}
-                handleSubmit={handleSubmit}
-                reviews={reviews}
-              />
-            )}
-          </div>
-          <ReviewList courseid={courseid} reviews={reviews} />
-        </div>
-      </div>
-      <div className="phoneNum">
-        <ul>{courseDetails.phone_num}</ul>
-        <ul>{courseDetails.url}</ul>
       </div>
     </div>
   )

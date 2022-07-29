@@ -23,7 +23,7 @@ const AddCourse = ({ toggleNewCourse, getCourses }) => {
     event.preventDefault()
 
     console.log(newCourse)
-    let res = await axios.post(`http://localhost:3001/api/courses/`, {
+    let res = await axios.post(`/api/courses/`, {
       ...newCourse
     })
     getCourses()
