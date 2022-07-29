@@ -50,7 +50,6 @@
 
 - [ ] Course Description Page
 - [ ] Golf Course API
-- [ ]
 
 ---
 
