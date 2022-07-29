@@ -8,7 +8,7 @@ const ReviewList = ({ courseid, reviews }) => {
   const [editReview, setEditReview] = useState(false)
 
   const getReviews = async () => {
-    const res = await axios.get(`/api/reviews/${courseid}`)
+    const res = await axios.get(`http://localhost:3001/api/reviews/${courseid}`)
     setReviewsByCourse(res.data)
   }
   useEffect(() => {
@@ -16,7 +16,7 @@ const ReviewList = ({ courseid, reviews }) => {
   }, [reviews])
 
   const deleteReview = async (id) => {
-    const res = await axios.delete(`/api/reviews/${id}`)
+    const res = await axios.delete(`http://localhost:3001/api/reviews/${id}`)
     getReviews()
   }
 
@@ -25,7 +25,7 @@ const ReviewList = ({ courseid, reviews }) => {
   }
 
   const updateReview = async (id) => {
-    const res = await axios.put(`/api/reviews/${id}`)
+    const res = await axios.put(`http://localhost:3001/api/reviews/${id}`)
   }
 
   return (

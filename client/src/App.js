@@ -36,7 +36,7 @@ function App() {
   const [showForm, setShowForm] = useState(false)
 
   const getCourses = async () => {
-    const res = await axios.get('/api/courses')
+    const res = await axios.get('http://localhost:3001/api/courses/')
     setCourses(res.data.courses)
     console.log(res.data.courses)
   }
@@ -49,7 +49,7 @@ function App() {
 
   const getReviews = async () => {
     try {
-      let res = await axios.get(`/api/reviews`)
+      let res = await axios.get(`http://localhost:3001/api/reviews`)
       setReviews(res.data)
     } catch (err) {
       console.log(err)
@@ -71,7 +71,7 @@ function App() {
     event.preventDefault()
     // setReviewState({ ...reviewState, course: courseid })
     console.log(reviewState)
-    let res = await axios.post(`/api/reviews/`, {
+    let res = await axios.post(`http://localhost:3001/api/reviews/`, {
       ...reviewState,
       course: courseid
     })
@@ -100,6 +100,19 @@ function App() {
           />
           <Route
             path="/courses/:courseid"
+            element={
+              <CourseDetails
+                reviewState={reviewState}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                toggleShowForm={toggleShowForm}
+                showForm={showForm}
+                reviews={reviews}
+              />
+            }
+          />
+          <Route
+            path="/allcourses/:courseid"
             element={
               <CourseDetails
                 reviewState={reviewState}

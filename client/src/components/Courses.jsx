@@ -19,8 +19,10 @@ const Courses = ({ courses, getCourses }) => {
   return (
     <div className="everyCourse">
       <div className="featured">
-        <h1>Featured Golf Courses</h1>
-        <h3>Contribute to our community by adding a new course</h3>
+        <div className="title">
+          <h1>Featured Golf Courses</h1>
+          <h3>Contribute to our community by adding a new course</h3>
+        </div>
         <div className="addCourseForm">
           {newCourse && (
             <AddCourse

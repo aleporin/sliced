@@ -19,7 +19,7 @@ const CourseDetails = ({
   let { courseid } = useParams()
   console.log(courseid)
   const getCourseId = async () => {
-    const res = await axios.get(`/api/courses/${courseid}`)
+    const res = await axios.get(`http://localhost:3001/api/courses/${courseid}`)
     setCourseDetails(res.data)
   }
   useEffect(() => {
@@ -50,16 +50,6 @@ const CourseDetails = ({
             <img src={courseDetails.img} className="image1" />
           </div>
         </div>
-        {/* <div>
-          {showForm && (
-            <ReviewForm
-            reviewState={reviewState}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            reviews={reviews}
-            />
-            )}
-          </div> */}
         <div className="reviewss">
           <div>
             {showForm && (
