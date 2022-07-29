@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import '../styles/nav.css'
 
 const Nav = () => {
   return (
@@ -6,7 +7,7 @@ const Nav = () => {
       <div>
         <Link to="" className="navSliced">
           {' '}
-          <img src="https://i.imgur.com/VMyxiv5.png" width={50} height={31} />
+          <img src="https://i.imgur.com/VMyxiv5.png" width={90} height={50} />
         </Link>
       </div>
       <ul>

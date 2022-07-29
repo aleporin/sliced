@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
+import '../styles/addCourse.css'
 
 const AddCourse = ({ toggleNewCourse, getCourses }) => {
   const [addCourse, setAddCourse] = useState([])

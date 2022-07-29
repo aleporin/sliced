@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import '../styles/reviewForm.css'
 
 const ReviewForm = ({ handleChange, handleSubmit, reviewState }) => {
   let { courseid } = useParams()
@@ -29,6 +30,9 @@ const ReviewForm = ({ handleChange, handleSubmit, reviewState }) => {
               <option value="4">4</option>
               <option value="5">5</option>
             </select>
+            <div className="reviewSubmitBtn">
+              <button type="submit">Submit</button>
+            </div>
           </div>
 
           <textarea
@@ -40,9 +44,6 @@ const ReviewForm = ({ handleChange, handleSubmit, reviewState }) => {
             placeholder="Leave a review?"
             className="reviewField"
           />
-          <div className="reviewSubmitBtn">
-            <button type="submit">Submit</button>
-          </div>
         </form>
       </div>
     </div>

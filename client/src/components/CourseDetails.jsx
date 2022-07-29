@@ -26,30 +26,77 @@ const CourseDetails = ({
   }, [])
 
   return (
-    <div>
+    <div className="singleDescriptions">
       <div className="courseName">
         <h1>{courseDetails.name}</h1>
       </div>
       <div className="location">
         <h2>{courseDetails.location}</h2>
       </div>
-      <h3>{courseDetails.description}</h3>
+      <div className="courseDesc">
+        <h3>{courseDetails.description} </h3>
+        {showForm && (
+          <ReviewForm
+            reviewState={reviewState}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            reviews={reviews}
+          />
+        )}
+      </div>
+
       <div className="courseDescription">
-        <div className="courseDesc"></div>
-        <img src={courseDetails.img} />
-        <img src={courseDetails.map_img} />
+        <div className="leaveReview">
+          {/* <div>
+            {showForm && (
+              <ReviewForm
+                reviewState={reviewState}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                reviews={reviews}
+              />
+            )}
+          </div> */}
+          {!showForm && (
+            <button onClick={toggleShowForm} className="enterReview">
+              Leave a review?
+            </button>
+          )}
+        </div>
+        <div className="courseDesc">
+          <img src={courseDetails.img} className="image1" />
+          <img src={courseDetails.map_img} className="image2" />
+          {showForm && (
+            <ReviewForm
+              reviewState={reviewState}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              reviews={reviews}
+            />
+          )}
+        </div>
+        {/* <div className="reviewForm">
+          {showForm && (
+            <ReviewForm
+              reviewState={reviewState}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              reviews={reviews}
+            />
+          )}
+        </div> */}
       </div>
       <div className="phoneNum">
         <ul>{courseDetails.phone_num}</ul>
         <ul>{courseDetails.url}</ul>
       </div>
-      <div className="leaveReview">
+      {/* <div className="leaveReview">
         {!showForm && (
           <button onClick={toggleShowForm} className="enterReview">
             Leave a review?
           </button>
         )}
-      </div>
+      </div> */}
 
       <div>
         {showForm && (

@@ -1,0 +1,27 @@
+.reviewHeader {
+}
+
+h1 {
+  align-items: center;
+}
+.form-container {
+  width: 30vw;
+  border: 2px solid black;
+  padding-bottom: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  margin-bottom: 1vh;
+  background-color: white;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.reviewField {
+  width: 25vw;
+}
+
+.userRating {
+  display: flex;
+  justify-content: space-evenly;
+}

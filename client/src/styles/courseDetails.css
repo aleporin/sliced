@@ -1,44 +1,43 @@
-.coursePic {
-  min-height: 300;
-  border: 1px solid blue;
-}
-
-.mapImg {
-  border: 10px solid green;
-  display: flex;
-  justify-content: flex-end;
-}
-.mapImg img {
-  width: 30%;
-  height: 30%;
-  object-fit: cover;
-  display: flex;
-  justify-content: center;
-}
-.phoneNum {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: center;
-}
-
 .courseName {
-  display: flex;
-  justify-content: center;
-}
-.location {
-  display: flex;
-  justify-content: center;
-}
-.courseDescription {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  /* width: 910px; */
-  /* border: 5px solid white; */
-  padding: 25px;
-  margin: auto;
+  color: white;
+}
+
+.phoneNum {
+  color: white;
+}
+
+.courseDesc {
+  position: relative;
+  top: 25px;
+  left: 25px;
+  padding: 10px;
+  display: flex;
+  flex: 1;
+}
+.image1 {
+  width: 25%;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+.image2 {
+  width: 25%;
+  position: absolute;
+  bottom: 15px;
+  left: 9px;
+  width: 25%;
+}
+
+.desc {
+  font-size: medium;
 }
 
 .leaveReview {
-  border: 2px solid red;
+  float: right;
+}
+
+.reviewForm {
+  float: right;
 }

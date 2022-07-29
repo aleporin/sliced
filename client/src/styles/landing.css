@@ -1,0 +1,14 @@
+.sliced {
+  color: white;
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Bungee Inline', 'Courier New', Courier, monospace;
+  margin: auto;
+}
+
+h2 {
+  color: white;
+}
