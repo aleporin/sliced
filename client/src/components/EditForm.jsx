@@ -19,13 +19,10 @@ const EditForm = ({ review, toggleReview, getReviews }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.put(
-      `http://localhost:3001/api/reviews/${review._id}`,
-      {
-        ...formValue,
-        course: courseid
-      }
-    )
+    let res = await axios.put(`/api/reviews/${review._id}`, {
+      ...formValue,
+      course: courseid
+    })
     toggleReview()
     getReviews()
   }

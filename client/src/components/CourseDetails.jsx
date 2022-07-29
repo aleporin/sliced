@@ -19,7 +19,7 @@ const CourseDetails = ({
   let { courseid } = useParams()
   console.log(courseid)
   const getCourseId = async () => {
-    const res = await axios.get(`http://localhost:3001/api/courses/${courseid}`)
+    const res = await axios.get(`/api/courses/${courseid}`)
     setCourseDetails(res.data)
   }
   useEffect(() => {
