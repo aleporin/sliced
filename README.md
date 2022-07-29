@@ -4,7 +4,7 @@
 
 ### By: Austin LePorin
 
-[GitHub](https://github.com/aleporin/golf_project) | [LinkedIn](https://www.linkedin.com/in/austin-leporin/) |
+[GitHub](https://github.com/aleporin/golf_project) | [LinkedIn](https://www.linkedin.com/in/austin-leporin/) | [Trello](https://trello.com/b/TcKZhF8h/sliced)
 
 ---
 
